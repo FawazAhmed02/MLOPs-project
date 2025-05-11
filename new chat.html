@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BankWise Chat | Banking Knowledge Assistant</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="new css.css">
+</head>
+<body>
+  <div class="particles-container">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+      <div class="logo">BankWise</div>
+    </div>
+  </header>
+
+  <div class="chat-container">
+    <div class="chat-header">
+      <div class="chat-title">
+        Banking Knowledge Assistant
+        <span class="typing" id="typing-indicator" style="display:none;">
+          <span class="typing-dot"></span>
+          <span class="typing-dot"></span>
+          <span class="typing-dot"></span>
+        </span>
+      </div>
+    </div>
+    
+    <div class="chat" id="chat">
+      <!-- Welcome message -->
+      <div class="message bot">
+        <div class="avatar">
+          <i class="fas fa-robot"></i>
+        </div>
+        <div class="text">
+          <div class="welcome-wave">👋</div>
+          Hi there! I'm your BankWise assistant. Ask me anything about banking regulations, internal workflows, or domain-specific knowledge.
+        </div>
+      </div>
+    </div>
+    
+    <div class="input-container">
+      <input type="text" class="input" id="input" placeholder="Type your banking question here..." autocomplete="off" />
+      <button class="button" id="button">
+        <i class="fas fa-paper-plane"></i>
+      </button>
+    </div>
+  </div>
+
+  <script src="new js.js"></script>
+  <script>
+    // Add this to your existing chat-script.js or include it here
+    
+    // Animate the welcome wave emoji
+    document.addEventListener('DOMContentLoaded', function() {
+      const wave = document.querySelector('.welcome-wave');
+      wave.classList.add('waving');
+    });
+    
+    // Create random particle animations
+    const particles = document.querySelectorAll('.particle');
+    particles.forEach(particle => {
+      // Random position
+      const posX = Math.random() * 100;
+      const posY = Math.random() * 100;
+      
+      // Random size
+      const size = Math.random() * 30 + 10;
+      
+      // Random animation duration
+      const duration = Math.random() * 20 + 10;
+      
+      // Random delay
+      const delay = Math.random() * 5;
+      
+      // Apply styles
+      particle.style.left = `${posX}%`;
+      particle.style.top = `${posY}%`;
+      particle.style.width = `${size}px`;
+      particle.style.height = `${size}px`;
+      particle.style.animationDuration = `${duration}s`;
+      particle.style.animationDelay = `${delay}s`;
+    });
+  </script>
+</body>
+</html>
