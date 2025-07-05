@@ -10,7 +10,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Load model and data
-GEMINI_API_KEY = "AIzaSyBddcUcZrqNSkNvMZKTufipP8Kg9pXdBkM"
+GEMINI_API_KEY = ""
 EMBEDDING_MODEL = 'all-MiniLM-L6-v2'
 TOP_K = 3
 EMBEDDINGS_FILE = "embeddings.npy"
